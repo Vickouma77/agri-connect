@@ -1,6 +1,8 @@
 <h1 align="center">agriMarketLink</h1>
 
-<h2 align="center">Description</h2>
+## Description
+
+```
 
 * E-commerce Marketplace for Local Farmers and Buyers to trade their products. 
 
