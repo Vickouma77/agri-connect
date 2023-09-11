@@ -1,6 +1,6 @@
-# agriMarketLink
+<h1 align="center" style="color:blue">agriMarketLink</h1>
 
-## Description
+## Descriptionbash
 
 * E-commerce Marketplace for Local Farmers and Buyers to trade their products. 
 
