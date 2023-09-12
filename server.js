@@ -3,7 +3,6 @@ const app = express()
 const routers = require('./routers/index')
 const port = parseInt(process.env.PORT, 10) || 5000
 
-app.use(express.json())
 app.use('/', routers)
 
 app.listen(port, () => {
