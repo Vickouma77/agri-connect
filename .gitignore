@@ -1,4 +1,5 @@
 node_modules/
 .eslintrc.json
 package-lock.json
+babel.config.js
 ```
