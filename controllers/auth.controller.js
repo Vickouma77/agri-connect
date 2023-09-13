@@ -107,3 +107,7 @@ exports.signin = (req, res) => {
             })
         })
 }
+
+exports.signout = (req, res) => {
+    res.status(200).send({ message: 'User was signed out successfully!' })
+}
