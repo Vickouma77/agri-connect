@@ -14,4 +14,6 @@ exports.moderatorBoard = (req, res) => {
     res.status(200).send('Moderator Content.')
 }
 
-// exports.signin = (req, res) => {
+exports.userContent = (req, res) => {
+    res.status(200).send('User Content.')
+}
