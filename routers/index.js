@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const controller = require('../controllers/auth.controller'); // Separate imports for controllers
+const controller = require('../controllers/auth.controller',);
+const userController = require('../controllers/user.controller',);
 
 const { verifySignUp, authJwt } = require('../auth/middlewares/indexjwt');
 
@@ -22,22 +23,22 @@ router.post('/signin', controller.signin);
 
 router.get('/signout', controller.signout);
 
-router.get('/user', [authJwt.verifyToken], controller.userContent);
+router.get('/user', [authJwt.verifyToken], userController.userContent);
 
 router.get(
     '/mod',
     [authJwt.verifyToken, authJwt.isModerator],
-    controller.moderatorBoard
+    userController.moderatorBoard
 );
 
 router.get(
     '/admin',
     [authJwt.verifyToken, authJwt.isAdmin],
-    controller.adminBoard
+    userController.adminBoard
 );
 
-router.get('/all', controller.allAccess);
+router.get('/all', userController.allAccess);
 
-router.get('/user-info', [authJwt.verifyToken], controller.userBoard); // Renamed the route
+router.get('/user-info', [authJwt.verifyToken], userController.userBoard); // Renamed the route
 
 module.exports = router;
