@@ -45,7 +45,6 @@
     "nodemon": "^2.0.2",
     "request": "^2.88.0",
     "sinon": "^7.5.0",
-    "superset": "^2.0.1",
     "supertest": "^6.3.3"
   }
 }
