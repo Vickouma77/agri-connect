@@ -8,14 +8,3 @@
 * The application will also allow farmers to view the current market prices of various agricultural products.
 * It will also allow users to view the current weather conditions of their location. 
 * Users can also register and login to the application and subscribe to receive email notifications when the prices of the products they are interested in fall below a certain price.
-
-## Technologies Used
-- Javascript
-- Node.js
-- Express.js
-- MongoDB
-- Mongoose
-- html
-- css
-
-## Installation
