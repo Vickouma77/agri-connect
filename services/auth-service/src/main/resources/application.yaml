@@ -1,3 +1,16 @@
 spring:
   application:
-    name: auth-service
+     name:auth-service
+  datasource:
+      url: jdbc:postgresql://172.17.0.2:5432/agri_connect
+      username: root
+      password: root
+      driver-class-name: org.postgresql.Driver
+  jpa:
+      hibernate:
+          ddl-auto: update
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.PostgreSQLDialect
+  show-sql: true
+  profiles.active: test
