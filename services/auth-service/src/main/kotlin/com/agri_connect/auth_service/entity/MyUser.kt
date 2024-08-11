@@ -13,5 +13,7 @@ class MyUser(
     @GeneratedValue(strategy = GenerationType.IDENTITY) val id: Long = 0,
     val username: String = "",
     val password: String = "",
-    val authority: String = ""
+    val authority: String = "",
+    val email: String = "",
+    val enabled: Boolean = true
 )

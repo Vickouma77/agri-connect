@@ -13,8 +13,10 @@ class WebAuthorizationConfig {
     @Bean
     fun securityFilterChain(http: HttpSecurity): SecurityFilterChain {
         http.httpBasic(Customizer.withDefaults())
+
         http.authorizeHttpRequests { requests ->
             requests
+                .requestMatchers("/register").permitAll()
                 .anyRequest().authenticated()
         }
 
