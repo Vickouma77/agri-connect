@@ -7,18 +7,24 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity
 import org.springframework.security.web.SecurityFilterChain
 
+
 @Configuration
 @EnableWebSecurity
 class WebAuthorizationConfig {
     @Bean
     fun securityFilterChain(http: HttpSecurity): SecurityFilterChain {
-        http.httpBasic(Customizer.withDefaults())
-
-        http.authorizeHttpRequests { requests ->
-            requests
-                .requestMatchers("/register").permitAll()
-                .anyRequest().authenticated()
-        }
+        http
+            .authorizeHttpRequests { authorize ->
+                authorize
+                    .requestMatchers("/login", "/register", "/api/auth/**").permitAll()
+                    .anyRequest().authenticated()
+            }
+            .formLogin { formLogin ->
+                formLogin
+                    .loginPage("/login")
+                    .permitAll()
+            }
+            .rememberMe(Customizer.withDefaults())
 
         return http.build()
     }
